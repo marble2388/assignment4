@@ -1,1 +1,10 @@
 c:\users\jeff\documents\visual studio 2015\Projects\assignment4\assignment4\bin\Debug\assignment4.exe.config
+C:\Users\Jeff\Documents\Visual Studio 2015\Projects\assignment4\assignment4\bin\Debug\assignment4.exe
+C:\Users\Jeff\Documents\Visual Studio 2015\Projects\assignment4\assignment4\bin\Debug\assignment4.pdb
+C:\Users\Jeff\Documents\Visual Studio 2015\Projects\assignment4\assignment4\obj\Debug\assignment4.csprojResolveAssemblyReference.cache
+C:\Users\Jeff\Documents\Visual Studio 2015\Projects\assignment4\assignment4\obj\Debug\assignment4.SelectForm.resources
+C:\Users\Jeff\Documents\Visual Studio 2015\Projects\assignment4\assignment4\obj\Debug\assignment4.StartForm.resources
+C:\Users\Jeff\Documents\Visual Studio 2015\Projects\assignment4\assignment4\obj\Debug\assignment4.Properties.Resources.resources
+C:\Users\Jeff\Documents\Visual Studio 2015\Projects\assignment4\assignment4\obj\Debug\assignment4.csproj.GenerateResource.Cache
+C:\Users\Jeff\Documents\Visual Studio 2015\Projects\assignment4\assignment4\obj\Debug\assignment4.exe
+C:\Users\Jeff\Documents\Visual Studio 2015\Projects\assignment4\assignment4\obj\Debug\assignment4.pdb

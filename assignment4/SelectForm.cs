@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace assignment4
 {
-    public partial class Form1 : Form
+    public partial class SelectForm : Form
     {
-        public Form1()
+        product comp = Program.comp;
+        public SelectForm()
         {
             InitializeComponent();
         }
@@ -21,6 +22,10 @@ namespace assignment4
         {
             // TODO: This line of code loads data into the 'dataSet1.products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this.dataSet1.products);
+
+        }
+        private void selection(object sender, EventArgs e)
+        {
 
         }
     }
