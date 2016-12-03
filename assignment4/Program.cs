@@ -17,7 +17,7 @@ namespace assignment4
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StartForm());
+            Application.Run(new splashForm());
         }
     }
 }

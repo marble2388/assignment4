@@ -49,10 +49,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="product.cs" />
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProductInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductInfoForm.Designer.cs">
+      <DependentUpon>ProductInfoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SelectForm.cs">
       <SubType>Form</SubType>
@@ -60,19 +67,28 @@
     <Compile Include="SelectForm.Designer.cs">
       <DependentUpon>SelectForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="StartForm.cs">
+    <Compile Include="splashForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartForm.Designer.cs">
-      <DependentUpon>StartForm.cs</DependentUpon>
+    <Compile Include="splashForm.Designer.cs">
+      <DependentUpon>splashForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="startForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="startForm.Designer.cs">
+      <DependentUpon>startForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ProductInfoForm.resx">
+      <DependentUpon>ProductInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelectForm.resx">
       <DependentUpon>SelectForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StartForm.resx">
-      <DependentUpon>StartForm.cs</DependentUpon>
+    <EmbeddedResource Include="splashForm.resx">
+      <DependentUpon>splashForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -84,6 +100,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="startForm.resx">
+      <DependentUpon>startForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
@@ -115,10 +134,13 @@
     <None Include="Resources\20150513191558-chip-computer-tech.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Netflix-Older-Logo.png" />
+    <None Include="Resources\Netflix-Older-Logo.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Netflix-Older-Logo.ico" />
+    <None Include="Resources\Netflix-Older-Logobig.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Netflix-Older-Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

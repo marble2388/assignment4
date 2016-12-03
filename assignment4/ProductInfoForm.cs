@@ -10,19 +10,12 @@ using System.Windows.Forms;
 
 namespace assignment4
 {
-    public partial class startForm : Form
+    public partial class ProductInfoForm : Form
     {
-        public startForm()
+        public SelectForm previousForm;
+        public ProductInfoForm()
         {
             InitializeComponent();
-        }
-
-        private void newButton_Click(object sender, EventArgs e)
-        {
-            SelectForm selectForm  = new SelectForm();
-            selectForm.previousForm = this;
-            selectForm.Show();
-            this.Hide();
         }
     }
 }
