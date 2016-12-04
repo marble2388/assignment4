@@ -35,10 +35,44 @@ namespace assignment4
                                     where product.productID == compSelect
                                     select product).FirstOrDefault();
                 selectionBox.Text = selectedComp.manufacturer + " " + selectedComp.model + " Priced at: $" + Math.Round(selectedComp.cost,2);
+                
+
+                comp.productID = selectedComp.productID;
+                comp.cost = Math.Round(Convert.ToDouble(selectedComp.cost), 2);
+                comp.manufacturer = selectedComp.manufacturer;
+                comp.model = selectedComp.model;
+                comp.RAM_type = selectedComp.RAM_type;
+                comp.RAM_size = selectedComp.RAM_size;
+                comp.displaytype = selectedComp.displaytype;
+                comp.screensize = selectedComp.screensize;
+                comp.resolution = selectedComp.resolution;
+                comp.CPU_Class = selectedComp.CPU_Class;
+                comp.CPU_brand = selectedComp.CPU_brand;
+                comp.CPU_type = selectedComp.CPU_type;
+                comp.CPU_number = selectedComp.CPU_number;
+                comp.condition = selectedComp.condition;
+                comp.OS = selectedComp.OS;
+                comp.platform = selectedComp.platform;
+                comp.HDD_size = selectedComp.HDD_size;
+                comp.HDD_speed = selectedComp.HDD_speed;
+                comp.GPU_type = selectedComp.GPU_Type;
+                comp.optical_drive = selectedComp.optical_drive;
+                comp.Audio_type = selectedComp.Audio_type;
+                comp.LAN = selectedComp.LAN;
+                comp.WIFI = selectedComp.WIFI;
+                comp.width = selectedComp.width;
+                comp.height = selectedComp.height;
+                comp.depth = selectedComp.depth;
+                comp.weight = selectedComp.weight;
+                comp.mouse_type = selectedComp.moust_type;
+                comp.power = selectedComp.power;
+                comp.webcam = selectedComp.webcam;
             }
             nextButton.Enabled = true;
         }
-        private void compSelection(product selectedComp)
+        /* no idea why this wont work. i cant get selectedComp to be an object
+        // and i cant get it to give variables when loaded so now every click you make changes the comp object
+        private void compSelection(selectedComp)
         {
             comp.productID = selectedComp.productID;
             comp.cost = selectedComp.cost;
@@ -71,7 +105,9 @@ namespace assignment4
             comp.power = selectedComp.power;
             comp.webcam = selectedComp.webcam;
 
+
         }
+        */
         private void ProductsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             selection(e);
@@ -87,10 +123,12 @@ namespace assignment4
 
         private void nextButton_Click(object sender, EventArgs e)
         {
+
             ProductInfoForm productInfoForm = new ProductInfoForm();
             productInfoForm.previousForm = this;
             productInfoForm.Show();
             this.Hide();
+            
 
         }
     }

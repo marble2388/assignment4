@@ -24,5 +24,13 @@ namespace assignment4
             selectForm.Show();
             this.Hide();
         }
+
+        private void loadButton_Click(object sender, EventArgs e)
+        {
+            Program.loadFile = true;
+            ProductInfoForm productInfoForm = new ProductInfoForm();
+            productInfoForm.Show();
+            this.Hide();
+        }
     }
 }

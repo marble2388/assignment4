@@ -1,0 +1,1 @@
+8;275.99;HP ;nx6125;DDR;512MB;SXGA+ wide viewing angle;15.4" ;1400 x 1050;AMD;Turion 64;ML-30;;Single-Core;Off-Lease;Windows XP Pro 32-Bit;Laptop;40GB;5400 RPM;ATI Mobility Radeon X300;CDROM Burner/DVD Player;HP Premier Sound 16-bit Sound;10/100 Ethernet LAN;802.11b/g Wireless Networking;12.9";1.22";10.6";5.9 lb;Touchpad;6-Cell Lithium-ion;None

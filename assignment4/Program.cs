@@ -12,9 +12,11 @@ namespace assignment4
         /// The main entry point for the application.
         /// </summary>
         public static product comp;
+        public static bool loadFile = false;
         [STAThread]
         static void Main()
         {
+            comp = new product();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new splashForm());
