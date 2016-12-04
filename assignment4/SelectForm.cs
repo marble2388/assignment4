@@ -7,28 +7,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//Jeff Hall
+//200328772
+//2016/12/02
+//App used to steal money from people looking to buy computers
 namespace assignment4
 {
     public partial class SelectForm : Form
     {
+        //start of form add comp object and pervious form
         public startForm previousForm;
         product comp = Program.comp;
         public SelectForm()
         {
             InitializeComponent();
         }
-
+        //im really bad at the name thing
+        //loads the selectForm and fills the table with dataset info
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dataSet1.products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this.dataSet1.products);
 
         }
+        //selects the row the user clicks on and shows the basic info in the selectionbox text
+        //it then loads all the selection info in to the comp object because i couldnt get it to work in a method
+        //fairly certain this allows a load with no info if you follow a certain path
         private void selection(DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
             {
+                //seems to select the row before unless +1
                 var compSelect = dataGrid.SelectedCells[0].RowIndex + 1;
                 var selectedComp = (from product
                                            in dataSet1.products
@@ -68,6 +77,7 @@ namespace assignment4
                 comp.power = selectedComp.power;
                 comp.webcam = selectedComp.webcam;
             }
+            //turns the next button on for use
             nextButton.Enabled = true;
         }
         /* no idea why this wont work. i cant get selectedComp to be an object
@@ -108,11 +118,12 @@ namespace assignment4
 
         }
         */
+        //this was used to make the selection smoother otherwise it will only load the first row clicked sometimes
         private void ProductsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             selection(e);
         }
-
+        //closes the program
         private void cancelButton_Click(object sender, EventArgs e)
         {
             // this is how i feel the cancel button should function
@@ -120,7 +131,7 @@ namespace assignment4
             // this.Hide();
             Application.Exit();
         }
-
+        //next button loads next form hides this one
         private void nextButton_Click(object sender, EventArgs e)
         {
 

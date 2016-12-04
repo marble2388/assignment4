@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 //Jeff Hall
 //200328772
-//2016/12/01
+//2016/12/02
 //App used to steal money from people looking to buy computers
 namespace assignment4
 {

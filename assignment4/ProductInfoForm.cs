@@ -8,7 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//Jeff Hall
+//200328772
+//2016/12/02-03
+//App used to steal money from people looking to buy computers
 //didnt test a single thing im just trusting that it will work
 namespace assignment4
 {
@@ -38,6 +41,8 @@ namespace assignment4
                 StreamWriter saver = new StreamWriter(saveFile.FileName, true);
                 //serj had suggested this soltuion to me as i couldnt get my comp object to save to the file and be read
                 //the streamwriter opens saves the variables then closes and informs the user
+                //now that i know i was having issues with my variable in selectForm 
+                //this might not have been needed 
                 saver.WriteLine(comp.productID + ";" +
                 comp.cost + ";" +
                 comp.manufacturer + ";" +
@@ -128,8 +133,8 @@ namespace assignment4
             comp.mouse_type = orderArray[28];
             comp.power = orderArray[29];
             comp.webcam = orderArray[30];
-            Program.comp = comp;
         }
+        //fills the form with info from the chosen computer
         private void fillForm()
         {
             idBox.Text = comp.productID.ToString();
@@ -150,7 +155,7 @@ namespace assignment4
             webcamBox.Text = comp.webcam;
             // enable next button
             nextButton.Enabled = true;
-            textBox.Text = "test";
+           // textBox.Text = "test";
 
         }
         //i forgot to change the name of the button
@@ -170,7 +175,7 @@ namespace assignment4
         {
             Application.Exit();
         }
-
+        //on load fill the form
         private void ProductInfoForm_Load(object sender, EventArgs e)
         {
             if (Program.loadFile)
@@ -178,11 +183,9 @@ namespace assignment4
                 OpenSaveFile();
                 Program.loadFile = false;
             }
-            if(comp.productID > 0)
-            {
                 fillForm();
                 //textBox.Text = "test";
-            }
+            
         }
         // same as button1 click loads selectform for a different product selection
         // it is such a small piece of code i felt i could just copy from button1 method 
@@ -196,44 +199,37 @@ namespace assignment4
             previousForm.Show();
             this.Hide();
         }
-
+        //exits the program
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        //saves the order to a file
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (comp.productID < 1)
-            {
-                MessageBox.Show("There is no product selected", "Please select a prodcut and try again", MessageBoxButtons.OK);
-            }
-            else
-            {
-                DialogResult result = MessageBox.Show("Are you sure?"," ", MessageBoxButtons.YesNo);
+        {          
+                DialogResult result = MessageBox.Show("Are you sure you would like to save this order?"," ", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     saveFile();
                 }
-            }
+            
         }
-
+        //opens saved order
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure?", " ", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Are you sure you would like to open this order?", " ", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 OpenSaveFile();
             }
         }
-
+        //next button loads orderForm and hides this one
         private void nextButton_Click(object sender, EventArgs e)
         {
             orderForm orderForm = new orderForm();
             orderForm.previousForm = this;
             orderForm.Show();
             this.Hide();
-            Program.comp = comp;
         }
     }
 }

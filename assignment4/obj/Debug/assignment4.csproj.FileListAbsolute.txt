@@ -10,3 +10,4 @@ C:\Users\Jeff\Documents\Visual Studio 2015\Projects\assignment4\assignment4\obj\
 C:\Users\Jeff\Documents\Visual Studio 2015\Projects\assignment4\assignment4\obj\Debug\assignment4.pdb
 C:\Users\Jeff\Documents\Visual Studio 2015\Projects\assignment4\assignment4\obj\Debug\assignment4.ProductInfoForm.resources
 C:\Users\Jeff\Documents\Visual Studio 2015\Projects\assignment4\assignment4\obj\Debug\assignment4.splashForm.resources
+C:\Users\Jeff\Documents\Visual Studio 2015\Projects\assignment4\assignment4\obj\Debug\assignment4.orderForm.resources

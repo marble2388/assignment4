@@ -87,6 +87,9 @@
     <Compile Include="startForm.Designer.cs">
       <DependentUpon>startForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="orderForm.resx">
+      <DependentUpon>orderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProductInfoForm.resx">
       <DependentUpon>ProductInfoForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +150,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Netflix-Older-Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comppic.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
